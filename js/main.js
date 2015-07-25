@@ -2,8 +2,8 @@
 /*global $, jQuery, alert*/
 //TO DO: build a new collision detection algorithm, move brick to middle, add top paddle
 var ctx;
-var x = 400;
-var y = 400;
+var x = 100;
+var y = 250;
 var dx = 2;
 var dy = 3;
 var width;
@@ -165,7 +165,7 @@ function re_draw() {
     numberOfRow = Math.floor(y / rowHeight);
     numberOfColumn = Math.floor(x / colWidth);
     //if so, reverse the ball and mark the brick as broken
-    if (y < rows * rowHeight && numberOfRow >= 0 && numberOfColumn >= 0 && bricks[numberOfRow][numberOfColumn] == 1) {
+    if (y < rows * rowHeight && x < columns * colWidth && numberOfRow >= 0 && numberOfColumn >= 0 && bricks[numberOfRow][numberOfColumn] == 1) {
         dy = -dy;
         bricks[numberOfRow][numberOfColumn] = 0;
     }
