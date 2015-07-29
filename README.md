@@ -1,1 +1,1 @@
-Breakout variation, based on Bill Mill canvas tutorial
+Breakout variation
